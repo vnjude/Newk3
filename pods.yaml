@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: icrm2
+  labels:
+    type: myapp
+    app: backend
+spec:
+  containers:
+    -  name: vnjude80
+       image: nginx

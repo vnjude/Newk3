@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: icrmdeployment
+  labels:
+    app: icrm
+spec:
+  selector:
+    matchLabels:
+      type: myapp
+      app: backend
+  replicas: 4
+  template:
+    metadata:
+      name: icrm2
+      labels:
+        type: myapp
+        app: backend
+    spec:
+      containers:
+        -  name: vnjude80
+           image: nginx
+
